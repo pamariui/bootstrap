@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Style css link -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- Fonts links -->
-    
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Style css link -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- java links -->
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3">
+                <div class="container">
+                    <a href="#" class="navbar-brand">&lt;Bandau Kodint/> </a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Expand navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse  d-flex justify-content-end" id="nav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </nav>
+        </header>
+
+        <main>
+            <div class="container mt-5">
+                <form novalidate>
+                    <div class="form-floating">
+                        <input type="email" id="email" class="form-control" placeholder="Your email" required>
+                        <label for="email" class="form-label">Your email</label>
+                        <div class="invalid-feedback mt-2">Invalid email please check</div>
+                        <div class="valid-feedback mt-2">Correct email</div>
+                    </div>
+                    
+                    <button class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+        </main>
+        <script>
+            const form = document.querySelector("form")
+
+            form.addEventListener('submit',e => {
+                if (!form.checkValidity()) {
+                    e.preventDefault()
+                }
+                form.classList.add('was-validated')
+            })
+        </script>
+    </body>
 </html>
