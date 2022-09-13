@@ -6,6 +6,14 @@
 
 .color1 {
     background-color: #533483;
-    
+}
 
+.col-3 {
+    height: 400px;
+    text-align: center;
+    color: white;
+}
+
+.no-bg {
+    background-color:#E94560;
 }
